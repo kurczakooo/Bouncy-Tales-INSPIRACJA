@@ -11,7 +11,7 @@ public class JajoScript : MonoBehaviour
     public LayerMask groundLayer; // Warstwa uziemienia
 
     private bool isGrounded;
-
+    // TEST
     void Start()
     {
         //body = GetComponent<Rigidbody2D>();
