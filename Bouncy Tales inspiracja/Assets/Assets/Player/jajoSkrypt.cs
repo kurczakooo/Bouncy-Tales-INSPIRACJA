@@ -14,7 +14,7 @@ public class JajoScript : MonoBehaviour
     // TEST
     void Start()
     {
-        //body = GetComponent<Rigidbody2D>();
+        body = GetComponent<Rigidbody2D>();
     }
 
     void Update()
