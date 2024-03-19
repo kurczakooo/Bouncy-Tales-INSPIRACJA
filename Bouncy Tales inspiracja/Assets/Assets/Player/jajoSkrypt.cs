@@ -11,10 +11,12 @@ public class JajoScript : MonoBehaviour
     public LayerMask groundLayer; // Warstwa uziemienia
 
     private bool isGrounded;
-    // TEST
+    private CircleCollider2D circleCollider; // Komponent CircleCollider2D ko?a
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
     }
 
     void Update()
@@ -26,6 +28,13 @@ public class JajoScript : MonoBehaviour
 
     void CheckGrounded()
     {
+        // Pobierz promie? ko?a
+        float radius = circleCollider.radius;
+
+        // Ustaw pozycj? punktu GroundCheck na odleg?o?? promienia ko?a poni?ej ?rodka ko?a
+        groundCheck.position = new Vector2(transform.position.x, transform.position.y - radius);
+
+        // Sprawd?, czy punkt GroundCheck znajduje si? nad ziemi?
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
@@ -40,7 +49,6 @@ public class JajoScript : MonoBehaviour
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("SKACZE");
             body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
     }
