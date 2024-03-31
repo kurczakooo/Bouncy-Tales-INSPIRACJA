@@ -8,10 +8,16 @@ public class MainMenu : MonoBehaviour
     // Play button in main menu
     public void PlayGame() {
         
-       // SceneManager.LoadScene("Level1");
-        SceneManager.LoadScene("ChooseLevel");
-
+        SceneManager.LoadScene("Level_1");
+        // SceneManager.LoadScene("ChooseLevel");
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
+
+
+    // Quits game xd
+    public void QuitGame() {
+        Debug.Log("Quiting!");
+        Application.Quit();
     }
 
 }
