@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class JajoScript : MonoBehaviour
 {
+    public int playerHealth = 1;
+
     public Rigidbody2D body;
     public float moveSpeed = 5f;
     public float jumpHeight = 5f;
@@ -19,7 +21,7 @@ public class JajoScript : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
     }
 
-    void Update()
+    void FixedUpdate()
     {
         CheckGrounded();
         MoveBall();
@@ -52,4 +54,18 @@ public class JajoScript : MonoBehaviour
             body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
     }
+
+    // When our collider2D touches other 2D collider with tag "Enemy", we die
+    private void OnCollisionEnter2D(Collision2D collision) {
+        
+        if(collision.gameObject.CompareTag("Enemy"))
+            Die();
+    }
+
+    private void Die() {
+        Debug.Log("You died");
+        gameObject.SetActive(false);
+    }
+
+
 }

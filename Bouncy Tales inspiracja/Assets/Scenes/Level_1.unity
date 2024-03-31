@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 104970187}
   m_Layer: 0
   m_Name: Idle 0 (1)
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4905,6 +4905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761a9ca6baec17e42af954f7b48b99b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 1
   body: {fileID: 1665623026}
   moveSpeed: 10
   jumpHeight: 10
