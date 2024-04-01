@@ -21,11 +21,12 @@ public class JajoScript : MonoBehaviour
         circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
     }
 
-    void FixedUpdate()
+    void Update()
     {
         CheckGrounded();
         MoveBall();
         Jump();
+        CheckDeath();
     }
 
     void CheckGrounded()
@@ -57,14 +58,18 @@ public class JajoScript : MonoBehaviour
 
     // When our collider2D touches other 2D collider with tag "Enemy", we die
     private void OnCollisionEnter2D(Collision2D collision) {
-        
-        if(collision.gameObject.CompareTag("Enemy"))
-            Die();
+
+        if (collision.gameObject.CompareTag("Enemy")) {
+            playerHealth -= 1;
+            Debug.Log("HP:" + playerHealth);
+        }
     }
 
-    private void Die() {
-        Debug.Log("You died");
-        gameObject.SetActive(false);
+    private void CheckDeath() {
+        if (playerHealth <= 0) {
+            Debug.Log("You died");
+            gameObject.SetActive(false);
+        }
     }
 
 
