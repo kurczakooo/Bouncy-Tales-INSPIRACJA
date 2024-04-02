@@ -1,31 +1,50 @@
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class playerscript : MonoBehaviour
 {
-    public float moveSpeed = 2.0f;
-    public float maxLeft = -1.0f;
-    public float maxRight = 1.0f;
+    public float speed = 1f; 
+    public float maxX = 1f;
+    public float minX = -1f; 
 
-    private bool moveRight = true;
+    private Rigidbody2D rb;
+    private bool movingRight = false; 
 
-    void Update()
+    void Start()
     {
-        if (moveRight && transform.position.x < maxRight)
-        {
-            transform.Translate(Vector2.right * moveSpeed * Time.deltaTime);
-        }
-        else if (!moveRight && transform.position.x > maxLeft)
-        {
-            transform.Translate(Vector2.left * moveSpeed * Time.deltaTime);
-        }
+        rb = GetComponent<Rigidbody2D>();
+    }
 
-        if (transform.position.x >= maxRight)
+    void FixedUpdate()
+    {
+        if (movingRight)
         {
-            moveRight = false;
+            if (transform.position.x >= maxX - speed * Time.deltaTime)
+            {
+                Flip();
+            }
+            else
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
         }
-        else if (transform.position.x <= maxLeft)
+        else
         {
-            moveRight = true;
+            if (transform.position.x <= minX + speed * Time.deltaTime)
+            {
+                Flip();
+            }
+            else
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+            }
         }
+    }
+
+    void Flip()
+    { 
+        movingRight = !movingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
