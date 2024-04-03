@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class JajoScript : MonoBehaviour
 {
+
+    public bool doubleJump = false;
+    private bool jumped = false;
     public int playerHealth = 1;
 
     public Rigidbody2D body;
@@ -52,7 +56,22 @@ public class JajoScript : MonoBehaviour
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
+            jumped = true;
             body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if (jumped == true && doubleJump == true)
+                {
+                    body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                    doubleJump = false;
+                    jumped = false;
+                }
+
+            }
         }
     }
 
@@ -71,6 +90,7 @@ public class JajoScript : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
 
 
 }
