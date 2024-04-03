@@ -1329,7 +1329,7 @@ GameObject:
   - component: {fileID: 637181126}
   - component: {fileID: 637181125}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1347,6 +1347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4abce2858c9ce83409bffbac83be01a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 876157052}
 --- !u!58 &637181126
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1454,6 +1455,17 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 1575158564781972419, guid: 2a2e8884bbf91f3478e4a747f5129478, type: 3}
   m_PrefabInstance: {fileID: 1009137177}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &876157052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5743729491516791770, guid: 2a2e8884bbf91f3478e4a747f5129478, type: 3}
+  m_PrefabInstance: {fileID: 1009137177}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 761a9ca6baec17e42af954f7b48b99b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &999784695
 PrefabInstance:
   m_ObjectHideFlags: 0
