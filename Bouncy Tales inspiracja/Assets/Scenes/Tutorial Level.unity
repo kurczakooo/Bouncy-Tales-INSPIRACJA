@@ -309,7 +309,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.0031446815, y: 0.0031446815, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -22035,9 +22035,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4712152259545771280, guid: f41f3a6b3d6ea1e479c211fa8d4fa263, type: 3}
+      propertyPath: m_Mass
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4712152259545771280, guid: f41f3a6b3d6ea1e479c211fa8d4fa263, type: 3}
+      propertyPath: m_LinearDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7083185541954641150, guid: f41f3a6b3d6ea1e479c211fa8d4fa263, type: 3}
       propertyPath: m_Name
       value: movable stone block
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148689776574725605, guid: f41f3a6b3d6ea1e479c211fa8d4fa263, type: 3}
+      propertyPath: m_Size.x
+      value: 0.99
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148689776574725605, guid: f41f3a6b3d6ea1e479c211fa8d4fa263, type: 3}
+      propertyPath: m_Size.y
+      value: 0.99
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
