@@ -5,6 +5,7 @@ using UnityEngine;
 public class JajoScript : MonoBehaviour
 {
     public int playerHealth = 1;
+    public int coinCount = 0;
 
     public Rigidbody2D body;
     public float moveSpeed = 5f;
@@ -62,6 +63,10 @@ public class JajoScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy")) {
             playerHealth -= 1;
             Debug.Log("HP:" + playerHealth);
+        }
+        if (collision.gameObject.CompareTag("coin"))
+        {
+            coinCount += 1;
         }
     }
 
