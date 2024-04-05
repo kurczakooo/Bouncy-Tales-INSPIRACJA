@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class JajoScript : MonoBehaviour
 {
-    public int playerHealth = 1;
-    public int coinCount = 0;
+    public static int playerHealth = 10;
 
     public Rigidbody2D body;
     public float moveSpeed = 5f;
@@ -16,19 +15,21 @@ public class JajoScript : MonoBehaviour
     private bool isGrounded;
     private CircleCollider2D circleCollider; // Komponent CircleCollider2D ko?a
 
+
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
     }
 
+
     void Update()
     {
         CheckGrounded();
         MoveBall();
         Jump();
-        CheckDeath();
     }
+
 
     void CheckGrounded()
     {
@@ -42,12 +43,14 @@ public class JajoScript : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
+
     void MoveBall()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         Vector2 movement = new Vector2(horizontalInput, 0f);
         body.velocity = new Vector2(movement.x * moveSpeed, body.velocity.y);
     }
+
 
     void Jump()
     {
@@ -57,25 +60,30 @@ public class JajoScript : MonoBehaviour
         }
     }
 
+
     // When our collider2D touches other 2D collider with tag "Enemy", we die
     private void OnCollisionEnter2D(Collision2D collision) {
-
-        if (collision.gameObject.CompareTag("Enemy")) {
-            playerHealth -= 1;
-            Debug.Log("HP:" + playerHealth);
-        }
-        if (collision.gameObject.CompareTag("coin"))
-        {
-            coinCount += 1;
+        
+        if (collision.gameObject.CompareTag("Enemy")){
+            PlayerGotHit();
         }
     }
 
-    private void CheckDeath() {
+
+    private void PlayerGotHit() {
+        playerHealth -= 1;
+        Debug.Log("HP:" + playerHealth);
+        ShouldDie();
+    }
+
+
+    private bool ShouldDie() {
         if (playerHealth <= 0) {
             Debug.Log("You died");
             gameObject.SetActive(false);
+            return true;
         }
+        return false;
     }
-
-
+/* To do: Hit sounds*/
 }
