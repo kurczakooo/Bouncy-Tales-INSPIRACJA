@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Finish Flag
+  - Water
+  - coin
   layers:
   - Default
   - TransparentFX
