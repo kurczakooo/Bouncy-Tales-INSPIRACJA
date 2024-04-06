@@ -7,7 +7,6 @@ public class JajoScript : MonoBehaviour
 {
 
     public bool doubleJump = false;
-    private bool jumped = false;
     public int playerHealth = 1;
 
     public Rigidbody2D body;
@@ -53,25 +52,18 @@ public class JajoScript : MonoBehaviour
     }
 
     void Jump()
-    {
+    {   
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            jumped = true;
+        
             body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
 
         }
-        else
+        else if(!isGrounded && Input.GetKeyDown(KeyCode.UpArrow) && doubleJump == true)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                if (jumped == true && doubleJump == true)
-                {
+                    body.velocity = new Vector2(body.velocity.x, 0f);
                     body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-                    doubleJump = false;
-                    jumped = false;
-                }
-
-            }
+                    doubleJump = false;     
         }
     }
 
