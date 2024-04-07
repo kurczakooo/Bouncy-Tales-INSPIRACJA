@@ -67,6 +67,10 @@ public class JajoScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy")){
             PlayerGotHit();
         }
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            death();
+        }
     }
 
 
@@ -79,11 +83,15 @@ public class JajoScript : MonoBehaviour
 
     private bool ShouldDie() {
         if (playerHealth <= 0) {
-            Debug.Log("You died");
-            gameObject.SetActive(false);
+            death();
             return true;
         }
         return false;
+    }
+
+    private void death() {
+        Debug.Log("You died");
+        gameObject.SetActive(false);
     }
 /* To do: Hit sounds*/
 }

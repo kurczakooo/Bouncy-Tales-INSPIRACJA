@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinScript : MonoBehaviour
+public class finishScript : MonoBehaviour
 {
-    public finishScript finishScript;
-
+    public int coinCount = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,15 +14,16 @@ public class CoinScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if(coinCount <= 1)
+        {
+            gameObject.SetActive(true);  
+        }
+        else
         {
             gameObject.SetActive(false);
-            finishScript.coinCount--;
         }
+
+        Debug.Log(coinCount.ToString() +  gameObject.activeSelf.ToString());
+        
     }
 }
