@@ -22,8 +22,8 @@ public class CoinScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            gameObject.SetActive(false);
             finishScript.coinCount--;
+            gameObject.SetActive(false);
         }
     }
 }

@@ -1,29 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class finishScript : MonoBehaviour
 {
-    public int coinCount = 0;
-    // Start is called before the first frame update
+    public int coinCount = 4;
+
     void Start()
     {
-        
+        gameObject.SetActive(false); // Dezaktywuj obiekt na początku
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(coinCount <= 1)
-        {
-            gameObject.SetActive(true);  
-        }
-        else
-        {
-            gameObject.SetActive(false);
-        }
+        Debug.Log(coinCount);
 
-        Debug.Log(coinCount.ToString() +  gameObject.activeSelf.ToString());
-        
+        if (coinCount == 0)
+        {
+            gameObject.SetActive(true); // Aktywuj obiekt gdy coinCount wynosi 0
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Przeszedles LEVEL");
+        }
     }
 }

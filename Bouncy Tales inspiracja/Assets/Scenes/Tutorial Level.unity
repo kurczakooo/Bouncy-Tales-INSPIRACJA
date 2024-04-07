@@ -1600,6 +1600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5313544835186481451, guid: 26ec625ea1e412e48800c551af0dd502, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26892,7 +26896,7 @@ PrefabInstance:
     - target: {fileID: 5366085305911855903, guid: 2a2e8884bbf91f3478e4a747f5129478, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5332477669f6d84da2b2793f61f1201, type: 2}
+      objectReference: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
     - target: {fileID: 5411833584056682080, guid: 2a2e8884bbf91f3478e4a747f5129478, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -26912,7 +26916,7 @@ PrefabInstance:
     - target: {fileID: 5411833584056682080, guid: 2a2e8884bbf91f3478e4a747f5129478, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: a5332477669f6d84da2b2793f61f1201, type: 2}
+      objectReference: {fileID: 2100000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
     - target: {fileID: 5671620608642553762, guid: 2a2e8884bbf91f3478e4a747f5129478, type: 3}
       propertyPath: m_TagString
       value: Player
