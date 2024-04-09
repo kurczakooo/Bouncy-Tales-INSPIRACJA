@@ -13,10 +13,20 @@ public class SceneLoader : MonoBehaviour
             throw new System.ArgumentException("Nazwa sceny jest pusta, lub null");
         }
 
-        try{
+        try {
             SceneManager.LoadScene(sceneName);
         }
-        catch (System.Exception ex){
+        catch (System.Exception ex) {
+            Debug.LogError("Błąd ładowania sceny: " + ex.Message);
+        }
+    }
+
+    public static void LoadNextScene() {
+
+        try {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        }
+        catch (System.Exception ex) {
             Debug.LogError("Błąd ładowania sceny: " + ex.Message);
         }
     }

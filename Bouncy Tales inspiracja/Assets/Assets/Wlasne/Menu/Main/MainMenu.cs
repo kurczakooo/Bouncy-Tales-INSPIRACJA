@@ -7,12 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     // Play button in main menu
     public void PlayGame() {
-        
         SceneLoader.LoadScene("Tutorial Level");
         // SceneManager.LoadScene("ChooseLevel");
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
-
 
     public void QuitGame() {
         Debug.Log("Quiting!");

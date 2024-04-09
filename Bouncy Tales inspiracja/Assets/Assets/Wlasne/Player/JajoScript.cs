@@ -69,27 +69,27 @@ public class JajoScript : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Water"))
         {
-            death();
+            Death();
         }
     }
 
 
     private void PlayerGotHit() {
         playerHealth -= 1;
-        Debug.Log("HP:" + playerHealth);
+        Debug.Log("HP: " + playerHealth);
         ShouldDie();
     }
 
 
     private bool ShouldDie() {
         if (playerHealth <= 0) {
-            death();
+            Death();
             return true;
         }
         return false;
     }
 
-    private void death() {
+    private void Death() {
         Debug.Log("You died");
         gameObject.SetActive(false);
     }
