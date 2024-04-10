@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +11,7 @@ public class JajoScript : MonoBehaviour
     public float jumpHeight = 5f;
     public Transform groundCheck; // Uziemienie
     public LayerMask groundLayer; // Warstwa uziemienia
+    public AudioSource jumpSound; // Komponent AudioSource dla dźwięku skoku
 
     private bool isGrounded;
     private CircleCollider2D circleCollider; // Komponent CircleCollider2D ko?a
@@ -57,6 +58,12 @@ public class JajoScript : MonoBehaviour
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
             body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+
+            // Odtwórz dźwięk skoku
+            if (jumpSound != null)
+            {
+                jumpSound.Play();
+            }
         }
     }
 
