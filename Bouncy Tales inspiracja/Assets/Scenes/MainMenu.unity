@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52118339}
   - component: {fileID: 52118340}
+  - component: {fileID: 52118341}
   m_Layer: 5
   m_Name: MainMenu
   m_TagString: Untagged
@@ -172,6 +173,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edd0cdbeab61ea6d8aec26e2d52168bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &52118341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52118338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb62ca0a5d6a6b714bdc45d49de44be5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &64037009
@@ -2264,7 +2277,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Tutorial Level
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2137090507
