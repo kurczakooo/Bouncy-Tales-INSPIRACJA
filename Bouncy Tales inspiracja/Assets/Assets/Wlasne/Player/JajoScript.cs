@@ -16,6 +16,7 @@ public class JajoScript : MonoBehaviour
     private bool isGrounded;
     private CircleCollider2D circleCollider; // Komponent CircleCollider2D ko?a
 
+    public bool doubleJump = false;
 
     void Start()
     {
@@ -64,6 +65,12 @@ public class JajoScript : MonoBehaviour
             {
                 jumpSound.Play();
             }
+        }
+        else if(!isGrounded && Input.GetKeyDown(KeyCode.UpArrow) && doubleJump == true)
+        {
+                    body.velocity = new Vector2(body.velocity.x, 0f);
+                    body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                    doubleJump = false;
         }
     }
 
