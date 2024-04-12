@@ -24,11 +24,11 @@ public class SceneDude : MonoBehaviour
         }
     }
 
-
-    public static void LoadNextScene() {
+    // If nothing passed as an argument, offset's value will be 1
+    public static void LoadNextScene(int offset = 1) {
 
         try {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+offset);
         }
         catch (System.Exception ex) {
             Debug.LogError($"Błąd ładowania nastepnej sceny" +
@@ -36,6 +36,7 @@ public class SceneDude : MonoBehaviour
         }
     }
 
+     
 
     public static void Play(){  
         LoadScene("Choose Level");
