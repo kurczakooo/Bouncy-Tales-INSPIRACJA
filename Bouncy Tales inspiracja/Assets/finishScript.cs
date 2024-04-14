@@ -21,12 +21,4 @@ public class finishScript : MonoBehaviour
             Flaga.SetActive(false); // Dezaktywuj obiekt na początku
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Przeszedles LEVEL");
-        }
-    }
 }
