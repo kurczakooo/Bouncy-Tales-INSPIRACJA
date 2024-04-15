@@ -36,7 +36,20 @@ public class SceneDude : MonoBehaviour
         }
     }
 
-     
+    public static void LoadMenu()
+    {
+        try
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError($"Błąd ładowania nastepnej sceny. Error msg: {ex.Message}");
+        }
+    }
+
+
+
 
     public static void Play(){  
         LoadScene("Choose Level");
