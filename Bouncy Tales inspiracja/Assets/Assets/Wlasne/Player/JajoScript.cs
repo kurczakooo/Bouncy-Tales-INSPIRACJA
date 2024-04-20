@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class JajoScript : MonoBehaviour
 {
+    public Canvas DeathUI;
+
     public static int playerHealth = 10;
 
     public Rigidbody2D body;
@@ -22,6 +24,7 @@ public class JajoScript : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
+        DeathUI.enabled = false;
     }
 
 
@@ -106,6 +109,7 @@ public class JajoScript : MonoBehaviour
     private void Death() {
         Debug.Log("You died");
         gameObject.SetActive(false);
+        DeathUI.enabled = true;
     }
 /* To do: Hit sounds*/
 }
