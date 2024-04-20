@@ -33,4 +33,15 @@ public class HealthScriptGui : MonoBehaviour
                 hearts[i].enabled = false;
         }
     }
+
+    public void restart()
+    {
+        int i;
+        for (i = 0; i < hearts.Length; ++i)
+        {
+            hearts[i].sprite = fullHeart;
+        }
+
+        JajoScript.playerHealth = 10;
+    }
 }
