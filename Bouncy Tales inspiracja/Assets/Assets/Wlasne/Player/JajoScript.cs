@@ -61,13 +61,13 @@ public class JajoScript : MonoBehaviour
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-
             // Odtwórz dźwięk skoku
             if (jumpSound != null)
             {
                 jumpSound.Play();
             }
+
+            body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
         else if(!isGrounded && Input.GetKeyDown(KeyCode.UpArrow) && doubleJump == true)
         {
