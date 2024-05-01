@@ -5,6 +5,7 @@ public class finishScript : MonoBehaviour
 {
     public int coinCount = 4;
     public GameObject Flaga;
+    public AudioSource pickUpCoinSound;
 
     void Start()
     {

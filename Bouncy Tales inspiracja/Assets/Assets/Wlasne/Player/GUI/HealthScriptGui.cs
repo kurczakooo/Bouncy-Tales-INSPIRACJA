@@ -11,13 +11,21 @@ public class HealthScriptGui : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+    public AudioSource DieSound;
 
     void Update() {
 
         // Player cant have more hp than hearts
         if(JajoScript.playerHealth > numberOfHearts)
             JajoScript.playerHealth = numberOfHearts;
-        
+
+        if (JajoScript.playerHealth <= 1)
+        {
+            if (DieSound != null)
+            {
+                DieSound.Play();
+            }
+        }
 
         int i;
         for(i = 0; i < hearts.Length; ++i){

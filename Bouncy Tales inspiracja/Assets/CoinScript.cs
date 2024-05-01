@@ -6,10 +6,11 @@ public class CoinScript : MonoBehaviour
 {
     public finishScript finishScript;
 
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -22,6 +23,7 @@ public class CoinScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            finishScript.pickUpCoinSound.Play();
             finishScript.coinCount--;
             Destroy(gameObject);
         }

@@ -14,6 +14,7 @@ public class JajoScript : MonoBehaviour
     public Transform groundCheck; // Uziemienie
     public LayerMask groundLayer; // Warstwa uziemienia
     public AudioSource jumpSound; // Komponent AudioSource dla dźwięku skoku
+    public AudioSource loseHP;
 
     private bool isGrounded;
     private CircleCollider2D circleCollider; // Komponent CircleCollider2D ko?a
@@ -92,6 +93,10 @@ public class JajoScript : MonoBehaviour
 
 
     private void PlayerGotHit() {
+        if (loseHP != null)
+        {
+            loseHP.Play();
+        }
         playerHealth -= 1;
         Debug.Log("HP: " + playerHealth);
         ShouldDie();
@@ -107,7 +112,7 @@ public class JajoScript : MonoBehaviour
     }
 
     private void Death() {
-        Debug.Log("You died");
+        playerHealth = 0;
         gameObject.SetActive(false);
         DeathUI.enabled = true;
     }
