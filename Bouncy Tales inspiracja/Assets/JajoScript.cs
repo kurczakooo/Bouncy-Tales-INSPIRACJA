@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,6 +16,7 @@ public class JajoScript : MonoBehaviour
     public LayerMask groundLayer; // Warstwa uziemienia
     public AudioSource jumpSound; // Komponent AudioSource dla dźwięku skoku
     public AudioSource loseHP;
+    public HealthScriptGui healthScriptGui;
 
     private bool isGrounded;
     private CircleCollider2D circleCollider; // Komponent CircleCollider2D ko?a
@@ -70,51 +72,61 @@ public class JajoScript : MonoBehaviour
 
             body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         }
-        else if(!isGrounded && Input.GetKeyDown(KeyCode.UpArrow) && doubleJump == true)
+        else if (!isGrounded && Input.GetKeyDown(KeyCode.UpArrow) && doubleJump == true)
         {
-                    body.velocity = new Vector2(body.velocity.x, 0f);
-                    body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
-                    doubleJump = false;
+            body.velocity = new Vector2(body.velocity.x, 0f);
+            body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            doubleJump = false;
         }
     }
 
 
     // When our collider2D touches other 2D collider with tag "Enemy", we die
-    private void OnCollisionEnter2D(Collision2D collision) {
-        
-        if (collision.gameObject.CompareTag("Enemy")){
-            PlayerGotHit();
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (loseHP != null)
+            {
+                loseHP.Play();
+            }
+            PlayerGotHit(1);
         }
         if (collision.gameObject.CompareTag("Water"))
         {
-            Death();
+            PlayerGotHit(10);
         }
     }
 
 
-    private void PlayerGotHit() {
-        if (loseHP != null)
-        {
-            loseHP.Play();
-        }
-        playerHealth -= 1;
-        Debug.Log("HP: " + playerHealth);
+    private void PlayerGotHit(int amount)
+    {
+        playerHealth -= amount;
         ShouldDie();
     }
 
 
-    private bool ShouldDie() {
-        if (playerHealth <= 0) {
+    private bool ShouldDie()
+    {
+        if (playerHealth <= 0)
+        {
+            if (healthScriptGui.die != null)
+            {
+                healthScriptGui.die.Play();
+                Debug.Log("YOU DIED");
+            }
             Death();
             return true;
         }
         return false;
     }
 
-    private void Death() {
+    private void Death()
+    {
         playerHealth = 0;
         gameObject.SetActive(false);
         DeathUI.enabled = true;
     }
-/* To do: Hit sounds*/
+    /* To do: Hit sounds*/
 }

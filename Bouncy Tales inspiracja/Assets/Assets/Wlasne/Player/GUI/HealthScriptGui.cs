@@ -11,7 +11,7 @@ public class HealthScriptGui : MonoBehaviour
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
-    public AudioSource DieSound;
+    public AudioSource die;
 
     void Update() {
 
@@ -19,23 +19,16 @@ public class HealthScriptGui : MonoBehaviour
         if(JajoScript.playerHealth > numberOfHearts)
             JajoScript.playerHealth = numberOfHearts;
 
-        if (JajoScript.playerHealth <= 1)
-        {
-            if (DieSound != null)
-            {
-                DieSound.Play();
-            }
-        }
-
         int i;
         for(i = 0; i < hearts.Length; ++i){
-            
-            if(i < JajoScript.playerHealth)
+
+            if (i < JajoScript.playerHealth)
                 hearts[i].sprite = fullHeart;
             else
                 hearts[i].sprite = emptyHeart;
 
-            if(i < numberOfHearts)
+
+            if (i < numberOfHearts)
                 hearts[i].enabled = true;
             else
                 hearts[i].enabled = false;
