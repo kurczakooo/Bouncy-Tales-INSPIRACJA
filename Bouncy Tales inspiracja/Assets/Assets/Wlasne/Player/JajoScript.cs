@@ -12,6 +12,7 @@ public class JajoScript : MonoBehaviour
     public Rigidbody2D body;
     public float moveSpeed = 5f;
     public float jumpHeight = 5f;
+    private float lowerJumpHeight = 3.5f;
     public Transform groundCheck; // Uziemienie
     public LayerMask groundLayer; // Warstwa uziemienia
     public AudioSource jumpSound; // Komponent AudioSource dla dźwięku skoku
@@ -64,13 +65,27 @@ public class JajoScript : MonoBehaviour
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
-            // Odtwórz dźwięk skoku
-            if (jumpSound != null)
+            // Check if the ball is on a slope or on the edge
+            if (!IsOnSlope() && !IsOnEdge())
             {
-                jumpSound.Play();
-            }
+                // If not on a slope or edge, perform normal jump
+                if (jumpSound != null)
+                {
+                    jumpSound.Play();
+                }
 
-            body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+                body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
+            }
+            else
+            {
+                // If on a slope or edge, perform lower jump
+                if (jumpSound != null)
+                {
+                    jumpSound.Play();
+                }
+
+                body.AddForce(Vector2.up * lowerJumpHeight, ForceMode2D.Impulse);
+            }
         }
         else if (!isGrounded && Input.GetKeyDown(KeyCode.UpArrow) && doubleJump == true)
         {
@@ -79,6 +94,35 @@ public class JajoScript : MonoBehaviour
             doubleJump = false;
         }
     }
+
+    bool IsOnSlope()
+    {
+        // Cast a ray downward to detect if the ball is on a slope
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
+
+        // Check if the hit collider is not null and the angle of the surface is greater than a threshold
+        if (hit.collider != null && Mathf.Abs(hit.normal.y) < 0.9f)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    bool IsOnEdge()
+    {
+        // Cast a ray downward to detect if the ball is on the edge
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 1f, groundLayer);
+
+        // Check if the hit collider is null
+        if (hit.collider == null)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 
 
     // When our collider2D touches other 2D collider with tag "Enemy", we die
