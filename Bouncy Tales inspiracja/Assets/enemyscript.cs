@@ -9,8 +9,9 @@ public class enemyscript : MonoBehaviour
 
     private Rigidbody2D rb;
     private bool movingRight = false;
+    
+    
     private float interval = 0.7f;
-
     public AudioSource steps;
     public Transform playerTransform;
     private float maxVolDist = 10f;
