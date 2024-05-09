@@ -13,6 +13,7 @@ public class finishflagtrigger : MonoBehaviour
     public float newCameraSize;
     public AudioSource flagUnlock;
     public AudioSource winSound;
+    public AudioSource level_sound;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,7 @@ public class finishflagtrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            level_sound.Stop();
             winSound.Play();
 
             timer.timeIsRunning = false;

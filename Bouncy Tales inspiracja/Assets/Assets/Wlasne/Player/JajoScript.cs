@@ -17,6 +17,7 @@ public class JajoScript : MonoBehaviour
     public LayerMask groundLayer; // Warstwa uziemienia
     public AudioSource jumpSound; // Komponent AudioSource dla dźwięku skoku
     public AudioSource loseHP;
+    public AudioSource level_music;
     public HealthScriptGui healthScriptGui;
 
     private bool isGrounded;
@@ -157,6 +158,7 @@ public class JajoScript : MonoBehaviour
         {
             if (healthScriptGui.die != null)
             {
+                level_music.Stop();
                 healthScriptGui.die.Play();
                 Debug.Log("YOU DIED");
             }
@@ -172,5 +174,4 @@ public class JajoScript : MonoBehaviour
         gameObject.SetActive(false);
         DeathUI.enabled = true;
     }
-    /* To do: Hit sounds*/
 }
