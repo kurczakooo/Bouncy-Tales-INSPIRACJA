@@ -9,6 +9,7 @@ public class CoinCounterScript : MonoBehaviour
     TextMeshProUGUI textMeshPro;
     public finishScript finishScript;
     private int maxCoins;
+    int currentCoins;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class CoinCounterScript : MonoBehaviour
         // Upewnij się, że textMeshPro nie jest nullem przed próbą jego użycia
         if (textMeshPro != null)
         {
-            int currentCoins = ((GetCoinCount() - maxCoins) * -1);
+            currentCoins = ((GetCoinCount() - maxCoins) * -1);
             textMeshPro.text = currentCoins + "/" + maxCoins;
         }
     }
