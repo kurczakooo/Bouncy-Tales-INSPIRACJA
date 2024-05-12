@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    private void Start()
+    {
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
+    }
     // Play button in main menu
     public void PlayGame() {
         SceneDude.LoadScene("ChooseLevel");

@@ -19,6 +19,7 @@ public class finishflagtrigger : MonoBehaviour
     void Start()
     {
         FinishLvlUI.enabled = false;
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
     }
 
     // Update is called once per frame

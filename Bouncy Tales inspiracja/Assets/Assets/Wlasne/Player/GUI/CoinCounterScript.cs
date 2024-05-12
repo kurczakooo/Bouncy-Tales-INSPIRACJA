@@ -15,6 +15,7 @@ public class CoinCounterScript : MonoBehaviour
         // Przypisz komponent TextMeshPro z obiektu, na którym jest ten skrypt
         textMeshPro = GetComponent<TextMeshProUGUI>();
         maxCoins = GetCoinCount();
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
     }
 
     void Update()

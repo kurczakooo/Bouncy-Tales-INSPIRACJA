@@ -21,6 +21,7 @@ public class enemyscript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         StartCoroutine(PlaySteps());
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
     }
 
     void FixedUpdate()

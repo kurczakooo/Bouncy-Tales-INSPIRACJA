@@ -13,6 +13,11 @@ public class HealthScriptGui : MonoBehaviour
     public Sprite emptyHeart;
     public AudioSource die;
 
+    private void Start()
+    {
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
+    }
+
     void Update() {
 
         // Player cant have more hp than hearts

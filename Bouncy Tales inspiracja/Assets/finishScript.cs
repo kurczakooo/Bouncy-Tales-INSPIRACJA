@@ -7,8 +7,9 @@ public class finishScript : MonoBehaviour
     public GameObject Flaga;
     public AudioSource pickUpCoinSound;
 
-    void Start()
+    private void Start()
     {
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
     }
 
     void FixedUpdate()

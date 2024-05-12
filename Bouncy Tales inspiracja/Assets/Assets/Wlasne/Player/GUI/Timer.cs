@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         timeIsRunning = true;
+            SoundManager.SetMasterVolume(SoundManager.masterVolume);
     }
 
     // Update is called once per frame

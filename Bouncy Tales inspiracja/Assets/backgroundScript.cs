@@ -12,6 +12,7 @@ public class backgroundScript : MonoBehaviour
 
     void Start()
     {
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
         mat = GetComponent<Renderer>().material;
     }
 

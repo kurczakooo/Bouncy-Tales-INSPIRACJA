@@ -14,10 +14,9 @@ public class cameraScript : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
     }
 
     // LateUpdate is called once per frame, after Update()

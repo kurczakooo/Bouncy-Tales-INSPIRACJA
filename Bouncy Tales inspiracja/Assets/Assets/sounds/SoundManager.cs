@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
-    public static float masterVolume;
+    public static float masterVolume = 1f;
 
     // Function to set the master volume level
     public static void SetMasterVolume(float volume)

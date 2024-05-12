@@ -2,6 +2,11 @@ using UnityEngine;
 
 public class FreezeSceneGUIButton : MonoBehaviour
 {
+
+    private void Start()
+    {
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
+    }
     // Funkcja do prze??czania stanu zamro?enia sceny
     public void ToggleFreezeScene()
     {
