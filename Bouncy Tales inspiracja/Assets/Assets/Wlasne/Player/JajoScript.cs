@@ -27,6 +27,7 @@ public class JajoScript : MonoBehaviour
 
     void Start()
     {
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
         body = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
         DeathUI.enabled = false;

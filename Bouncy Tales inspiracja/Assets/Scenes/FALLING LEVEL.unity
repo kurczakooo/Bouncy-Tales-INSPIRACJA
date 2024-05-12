@@ -88746,6 +88746,10 @@ PrefabInstance:
       propertyPath: finishScript
       value: 
       objectReference: {fileID: 2068798916}
+    - target: {fileID: 6989041290231909795, guid: 15612c118e9528222993bff0c3f75f12, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1361830170}
     - target: {fileID: 7935030673500130522, guid: 15612c118e9528222993bff0c3f75f12, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.643893

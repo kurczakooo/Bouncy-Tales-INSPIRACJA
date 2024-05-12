@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Cheems : MonoBehaviour
@@ -7,6 +8,11 @@ public class Cheems : MonoBehaviour
     public float rotationSpeed = 30f; // Szybkość obrotu
     public float movementSpeed; // Szybkość przesuwania
     private bool movingRight = true; // Czy obiekt przesuwa się w prawo
+
+    private void Start()
+    {
+        SoundManager.SetMasterVolume(SoundManager.masterVolume);
+    }
 
     void FixedUpdate()
     {
