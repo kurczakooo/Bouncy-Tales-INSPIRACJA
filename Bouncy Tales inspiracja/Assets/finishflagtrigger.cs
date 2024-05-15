@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class finishflagtrigger : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class finishflagtrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            SaveSytem.LvlCompleted(SceneManager.GetActiveScene().buildIndex); // Game saved after completing lvl
             level_sound.Stop();
             winSound.Play();
 
@@ -43,6 +45,8 @@ public class finishflagtrigger : MonoBehaviour
             MainCamera.orthographicSize = newCameraSize;
 
             Player.SetActive(false);
+
+           
         }
     }
 }

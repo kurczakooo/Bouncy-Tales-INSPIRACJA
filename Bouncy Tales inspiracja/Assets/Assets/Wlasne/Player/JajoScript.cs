@@ -2,13 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JajoScript : MonoBehaviour
 {
     public Canvas DeathUI;
 
     public static int playerHealth = 10;
-
+    
     public Rigidbody2D body;
     public float moveSpeed = 5f;
     public float jumpHeight = 5f;
@@ -27,9 +28,13 @@ public class JajoScript : MonoBehaviour
 
     void Start()
     {
+        int id = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(id);
         body = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
         DeathUI.enabled = false;
+
+        //2 tutorial 3 FALLING LEVEL 4 LEVEL2 TEST
     }
 
 

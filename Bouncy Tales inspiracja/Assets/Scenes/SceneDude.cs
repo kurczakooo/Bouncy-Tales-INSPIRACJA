@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class SceneDude : MonoBehaviour
@@ -47,11 +49,8 @@ public class SceneDude : MonoBehaviour
             Debug.LogError($"Błąd ładowania nastepnej sceny. Error msg: {ex.Message}");
         }
     }
-
-
-
-
-    public static void Play(){  
+    
+    public static void Play(){ 
         LoadScene("Choose Level");
     }
 
