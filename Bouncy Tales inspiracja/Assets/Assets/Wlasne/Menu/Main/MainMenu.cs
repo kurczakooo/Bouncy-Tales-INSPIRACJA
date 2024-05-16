@@ -21,4 +21,9 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quiting!");
         Application.Quit();
     }
+
+    public void EraseProgress()
+    {
+        SaveSytem.EraseProgress();
+    }
 }
