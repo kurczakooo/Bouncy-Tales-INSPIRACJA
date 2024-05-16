@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JajoScript : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class JajoScript : MonoBehaviour
     void Start()
     {
         SoundManager.SetMasterVolume(SoundManager.masterVolume);
+
+        int id = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log(id);
+
         body = GetComponent<Rigidbody2D>();
         circleCollider = GetComponent<CircleCollider2D>(); // Pobierz CircleCollider2D
         DeathUI.enabled = false;
