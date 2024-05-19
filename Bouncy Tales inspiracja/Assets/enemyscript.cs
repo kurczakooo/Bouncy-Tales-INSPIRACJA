@@ -39,7 +39,7 @@ public class enemyscript : MonoBehaviour
         }
         else
         {
-            if (transform.position.x <= minX + speed * Time.deltaTime)
+            if (transform.position.x < minX + speed * Time.deltaTime)
             {
                 Flip();
             }
