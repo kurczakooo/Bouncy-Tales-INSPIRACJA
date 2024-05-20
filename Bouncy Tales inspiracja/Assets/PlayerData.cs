@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerData
 {
     // Length must be number of scenes + 1
-    public bool[] level = new bool[5];
+    public bool[] level = new bool[6];
    
     public PlayerData(int sceneIndex)
     {

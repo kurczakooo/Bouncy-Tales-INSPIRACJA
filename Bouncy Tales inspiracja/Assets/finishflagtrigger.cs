@@ -19,7 +19,7 @@ public class finishflagtrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FinishLvlUI.enabled = false;
+        //FinishLvlUI.enabled = false;
         SoundManager.SetMasterVolume(SoundManager.masterVolume);
     }
 
@@ -33,7 +33,8 @@ public class finishflagtrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SaveSytem.LvlCompleted(SceneManager.GetActiveScene().buildIndex); // Game saved after completing lvl
+            //SaveSytem.LvlCompleted(SceneManager.GetActiveScene().buildIndex); // Game saved after completing lvl
+            
             level_sound.Stop();
             winSound.Play();
 

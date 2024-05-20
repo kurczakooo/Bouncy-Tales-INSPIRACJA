@@ -47,6 +47,14 @@ public class SaveLoader : MonoBehaviour
                             transform.Find("Level_2").GetComponent<Button>().image = btnColor;
                         }
                         break;
+                    case 5:
+                        if (lvlCompleted[i])
+                        {
+                            Image btnColor = transform.Find("Level_3").GetComponent<Button>().image;
+                            btnColor.color = new Color(0.970f, 0.744f, 0.00f, 1.0f);
+                            transform.Find("Level_3").GetComponent<Button>().image = btnColor;
+                        }
+                        break;
                 }
             }
 
@@ -55,6 +63,7 @@ public class SaveLoader : MonoBehaviour
             Debug.Log("scene index 2 " + lvlCompleted[2]);
             Debug.Log("scene index 3 " + lvlCompleted[3]);
             Debug.Log("scene index 4 " + lvlCompleted[4]);
+            Debug.Log("scene index 5 " + lvlCompleted[5]);
         }
         
     }
