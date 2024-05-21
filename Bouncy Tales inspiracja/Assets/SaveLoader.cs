@@ -63,7 +63,7 @@ public class SaveLoader : MonoBehaviour
             Debug.Log("scene index 2 " + lvlCompleted[2]);
             Debug.Log("scene index 3 " + lvlCompleted[3]);
             Debug.Log("scene index 4 " + lvlCompleted[4]);
-            Debug.Log("scene index 5 " + lvlCompleted[5]);
+            
         }
         
     }

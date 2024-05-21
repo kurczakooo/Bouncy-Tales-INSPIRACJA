@@ -33,7 +33,7 @@ public class finishflagtrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            //SaveSytem.LvlCompleted(SceneManager.GetActiveScene().buildIndex); // Game saved after completing lvl
+            SaveSytem.LvlCompleted(SceneManager.GetActiveScene().buildIndex); // Game saved after completing lvl
             
             level_sound.Stop();
             winSound.Play();
