@@ -404,12 +404,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.0000019073486, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 48703163}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 48703163}
+  m_maskType: 0
 --- !u!23 &48703163
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -843,12 +843,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.0000019073486, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 143730283}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 143730283}
+  m_maskType: 0
 --- !u!23 &143730283
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1992,12 +1992,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.0000019073486, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 832574083}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 832574083}
+  m_maskType: 0
 --- !u!23 &832574083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2403,12 +2403,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.0000019073486, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1102898760}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1102898760}
+  m_maskType: 0
 --- !u!23 &1102898760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2732,12 +2732,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.0000019073486, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1369375556}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1369375556}
+  m_maskType: 0
 --- !u!23 &1369375556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2992,12 +2992,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.0000019073486, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1456139262}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1456139262}
+  m_maskType: 0
 --- !u!23 &1456139262
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3488,7 +3488,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e94c58eeaec1c474fbc9ebc49dea7b94, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8cf1356683a397046a96332344777d21, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -27080,12 +27080,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -0.0028789043}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1838610949}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1838610949}
+  m_maskType: 0
 --- !u!23 &1838610949
 MeshRenderer:
   m_ObjectHideFlags: 0

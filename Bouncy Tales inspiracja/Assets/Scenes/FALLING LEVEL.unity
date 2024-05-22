@@ -91269,7 +91269,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6197b9a3b99fc494ca319f12877e441e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ca4c95de47c216243bea18220ec929b8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -94502,7 +94502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8692824113513174962, guid: 3765fe2cf5cd34d41920c7773231b05d, type: 3}
       propertyPath: coinCount
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8692824113513174962, guid: 3765fe2cf5cd34d41920c7773231b05d, type: 3}
       propertyPath: pickUpCoinSound
