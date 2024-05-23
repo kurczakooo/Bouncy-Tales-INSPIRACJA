@@ -1,0 +1,44 @@
+ASSETY
+Do assetów zaliczają się wszytkie wizualne elementy oraz animacje. Kilka elementów takie jak sama postać(czerwona kulka), bądź tło(niebo z chmurami), albo przyciski, ikony i napisy wykonaliśmy sami.
+
+Nature pixel art base assets FREE by BlackSpire
+https://assetstore.unity.com/packages/2d/environments/nature-pixel-art-base-assets-free-151370
+
+Pixel Adventure 1 by Pixel Frog
+https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360
+
+Simple Heart Health System by OArielG
+https://assetstore.unity.com/packages/tools/gui/simple-heart-health-system-120676
+
+Lazy River Tileset by Fozzle
+https://foozlecc.itch.io/critters-lazy-river
+---------------------------------------------------------------------------------------
+
+DŹWIĘKI
+Wszystkie efekty dźwiękowe użyte w grze pochodzą ze stron internetowych:
+
+https://www.zapsplat.com/sound-effect-categories/
+
+https://www.storyblocks.com/audio/search?media-type=sound-effects&search-origin=applied_filters
+---------------------------------------------------------------------------------------
+
+MUZYKA
+Dotyczy muzyki na wszystkich scenach gry.
+
+Pou music ost - Match Tap/Color Tap
+https://www.youtube.com/watch?v=E6uTAkfkPVs&list=PL8tKjHTEp8rt0vX-xbNPjNOs-wQFk1gF9
+
+Pou music ost - Beach Volley
+https://www.youtube.com/watch?v=XprZqZk87xE&list=PL8tKjHTEp8rt0vX-xbNPjNOs-wQFk1gF9&index=2
+
+Pou music ost - Hill Drive/Pet Walk
+https://www.youtube.com/watch?v=40PRxcqNjo4&list=PL8tKjHTEp8rt0vX-xbNPjNOs-wQFk1gF9&index=3
+
+Pou music ost - Sky Jump
+https://www.youtube.com/watch?v=xEWJyi6zp24&list=PL8tKjHTEp8rt0vX-xbNPjNOs-wQFk1gF9&index=5
+
+Platformer First Level Game Music - Royalty Free Music
+https://www.youtube.com/watch?app=desktop&v=DmOwCvJOcUo
+
+Elevator Music (Kevin MacLeod) - Background Music (HD)
+https://www.youtube.com/watch?v=xy_NKN75Jhw
